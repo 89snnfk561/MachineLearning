@@ -39,7 +39,6 @@ def lostmetrix(ydata, label):
                 listv[j] += 1
     metrix = np.append(metrix, listv)
     metrix = metrix.reshape(3, 3)
-    print(metrix)
     return metrix
 
 
@@ -69,7 +68,7 @@ if __name__ == '__main__':
     for i in range(3):
         correct += max(metrix[i])
     print(correct/len(iris.y))
-    print(len(iris.y))
+
     for i in range(cluster_num):
         plt.scatter(center[i][0], center[i][1], c='black')
     plt.show()
