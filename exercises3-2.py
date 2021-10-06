@@ -18,12 +18,14 @@ class Iris():
         print(self.y)
 
     def select(self, x, y):
-        l = len(self.data)
-        temp = np.array(self.data[:, x])
-        temp2 = np.array(self.data[:, y])
-        self.data = np.append(temp, temp2)
-
-        self.data = self.data.reshape(2, -1)
+        # l = len(self.data)
+        # temp = np.array(self.data[:, x])
+        # temp2 = np.array(self.data[:, y])
+        # self.data = np.append(temp, temp2)
+        #
+        # self.data = self.data.reshape(2, -1)
+        self.data = iris.data[:, [x, y]]
+        self.data = self.data.T
         print(self.data)
 
 
