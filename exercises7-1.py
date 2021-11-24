@@ -56,7 +56,7 @@ class NeuralNetwork:
                 sum_h2 = self.h2.feedforward(x)
                 out_h2 = sigmoid(sum_h2)
 
-                sum_o1 = self.h1.feedforward(x)
+                sum_o1 = self.o1.feedforward(x)
                 out_o1 = sigmoid(sum_o1)
                 y_pred = out_o1
 
